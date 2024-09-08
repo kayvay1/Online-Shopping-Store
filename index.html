@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMC</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navstyle.css">
+    <link rel="stylesheet" href="./sidecart.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navup">
+            <div>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+            <div>
+              <i class="fa fa-phone"></i>  &nbsp; 
+              <a href="tel:+917340181320"> +917340181320 </a>
+            </div>
+        </nav>
+
+        <nav class="navcenter" id="navcenter">
+            <div class="centerleft">
+                <h2><img src="./assets/Logo.PNG" alt="" width="200"></h2>
+            </div>
+            <div class="centermid">
+                <i class="fa fa-search"> <input type="search" name="search" id="search" placeholder="Search Products"></i>
+               
+            </div>
+            <div class="centerright">
+
+               <a href="#" class="loginsignin"> <i class="fa fa-user"></i> Login / Sign-in</a>
+
+               <a href="#/cart" class="cart" id="cart"><i class="fa fa-shopping-cart"></i><span id="carttotalvalue"> ₹ 0</span> <span id="cartindex">0</span></a>
+
+            </div>
+
+        </nav>
+
+        <nav class="navbtm" id="navbtm">
+            <div id="container">
+                <ul id="menu" class="menu">
+                  <li><a href="#">Blouse</a>
+                    <ul>
+                      <li><a href="#">Hand Work blouse</a></li>
+                      <li><a href="#">Strichable Blouse</a></li>
+                      <li><a href="#">Suspendisse fringilla</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Saree</a>
+                    <ul>
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Maecenas dignissim fermentum luctus</a></li>
+                      <li><a href="#">Suspendisse fringilla</a></li>
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Maecenas lacinia sem</a></li>
+                      <li><a href="#">Suspendisse fringilla</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Lehanga</a>
+                    <ul>
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Maecenas lacinia sem</a></li>
+                      <li><a href="#">Suspendisse fringilla</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Peticot</a>
+                    <ul>
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Maecenas dignissim fermentum luctus</a></li>
+                      <li><a href="#">Suspendisse fringilla</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Suit & dupatta</a></li>
+                </ul>
+                </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+    <!-- api and loader  -->
+
+    <div class="card-section">
+        <div id="card-container">
+            
+            <div class="cards" id="cards">
+               
+               <div class="loadi">
+                <p>JAY MAA CREATION में आपका हार्दिक स्वागत है ! Wholsale & Reatile blouse Manufacture HUB <br> Please Wait... </p>
+                <div class="loadingwebsite">
+                
+                    <div class="loader">   </div>
+                    
+                   </div>
+               </div>
+
+               
+
+            </div>
+        </div>
+    </div>
+ 
+    <section id="sidecartsection" class="sidecartsection">
+      <div id="sidecart" class="sidecart">
+        <div class="sidecarthead">
+          <h2>Shoping Cart</h2> 
+          <a href="#" id="cartclose"><i class="fa fa-close"></i> Close</a>
+        </div>
+        <hr>
+
+        <div class="cartitem" id="cartitem"></div>
+
+        <div class="sidecartbtm">
+          <hr>
+          <h4 id="gstamt"></h4>
+          <div class="cartbtmdata">
+            <h3>Subtotal: </h3>
+            <h3 id="cartsubtotal">₹ 00</h3>
+          </div>
+          <button id="viewcartbtn" type="submit" >View Cart</button> <br>
+          <button id="viewcheckout" type="submit">Checkout</button>
+
+        </div>
+
+      </div>
+
+      <div class="sidecheckout" id="sidecheckout">
+        <h1 style="text-align: center;">Carts Data</h1>
+
+        <div class="sidecartdata">
+          <div class="sidecarddataleft">
+            <div class="sidecardleftup" id="sidecardleftup">
+              <h1 id="sidecardleftupheading"> </h1>
+              
+
+            </div>
+            <div class="sidecardleftbtm">
+              <div>
+                <h4>Have Question?</h4>
+                <p>Our Experts are here to help! <a href="#">Call us</a></p>
+              </div>
+              <div>
+                <h4>Secure shopping</h4>
+                <p>All transaction are protacted by SSL</p>
+              </div>
+              <div>
+                <h4>Privacy protection</h4>
+                <p>Your privacy is always our top priority.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sidecarddataright">
+            <h2>Cart Total</h2>
+            <h4>Subtotal: <span id="sidecarddatarightsubtotal">₹ 00</span></h4>
+            <hr>
+            <h4>Shipping <span>Shipping will be <input type="radio" name="" id="">Calculated at transport</span></h4>
+
+            <hr>
+
+            <h4>GST: <span id="sidecarddatarightgst">00</span></h4>
+
+            <hr>
+
+            <h2>Total: <span id="sidecarddatarightwithgst">₹ 0</span></h2>
+
+
+            <button type="submit" id="viewcartcheckout">Proceed to checkout</button>
+          </div>
+        </div>
+
+
+
+
+        
+
+      </div>
+      
+    </section>
+
+
+    <section id="aftercheckout">
+      
+      <div class="checkoutform" id="checkoutform">
+        <h2><span>01</span> Billing Details </h2>
+        <form action="https://formspree.io/f/mbjnjnzo" method="POST" id="checkoutformdata">
+          <div class="formnamedata">
+           <div>
+            <label for="fristname">First name</label>  <br>
+            <input type="text" name="fristname" id="fristname" required value="">
+           </div>
+          
+          <div>
+          <label for="lastname">Last name</label>  
+          <input type="text" name="lastname" id="">
+         </div>
+          </div>
+          <div class="formnameaddress">
+            <label for="firmname">Company Name (Optional)</label> 
+            <input type="text" name="firmname" id=""> 
+          
+          
+            <label for="region">Country / Region * </label> 
+            <input type="text" name="region" id="" value="India">
+          
+          
+            <label for="streetadrs">Street address *</label> 
+            <input type="text" name="streetadrs" id="streetadrs" placeholder="House number & street name" required value=""> 
+            <input type="text" name="streetadrs" id="" placeholder="Apartment, Suite, Unit, etc (optinoal)"> 
+          
+          
+            <label for="city">Town / City * </label> 
+            <input type="text" name="city" id="city" required value=""> 
+          
+          
+            <label for="state">State * </label>  
+            <input type="text" name="state" id="state" required value=""> 
+        
+          
+            <label for="pincode">PIN Code * </label>  
+            <input type="number" name="pincode" id="pincode" required value=""> 
+          
+          
+            <label for="phonenumber">Phone * </label>  
+            <input type="tel" name="phonenumber" id="phonenumber" required value=""> 
+          
+          
+        
+            <label for="emial">Email address * </label> 
+            <input type="email" name="emial" id="emial" required value=""> 
+        
+          <div>
+            <label for="ordernotes">Order notes (optional) </label> 
+            <textarea name="ordernotes" id="formtextarea" rows="10" cols="15" placeholder="Notes about your order, e.g. Special notes for deleviry."></textarea>
+          </div>
+          
+          
+
+        </form>
+        <h2><span>02</span> Your Order </h2>
+
+        <div class="checkoutproduct">
+          <div class="checkoutproducthead">
+            <div class="checkoutproductheadchild">
+              <h3>PRODUCT</h3>
+              <h3>SUBTOTAL</h3>
+            </div>
+            <hr style="font-weight: 900; font-size: larger; border: 1px solid black;">
+          </div>
+          
+          <div class="checkoutproductdata" id="checkoutproductdata">
+
+            <!-- <div class="checkoutdataperents">
+              <div class="checkoutproductdataleft">
+                <div class="checkoutimage">
+                  <img src="" alt="img of pro" id="checkoutimagetag">    
+                
+                </div>
+                <div class="checkoutproductdeatiles">
+                  <h4 class="checkoutproductname">Product anme</h4>
+                  <h4 class="checkoutproductquentaty">Quentaty</h4>
+                </div>
+              </div>
+              <div class="checkoutproductdataright">
+                <h4 id="checkoutproductprice">₹ 00</h4>
+              </div>
+            </div> -->
+            
+
+            <hr>
+          </div>
+          <div class="checkoutsubtotal">
+            <div class="checkoutsubtotaldiv">
+              <div class="checkoutsubtotalgrossamt">
+                <h4>Subtoal</h4>
+                <h4 id="checkoutgross">₹ 0</h4>
+              </div>
+              <hr>
+              <div class="checkoutsubtotalshipping">
+                <h4>Shipping</h4>
+                <span>Shipping will be calculated at transport <input type="radio" name="" id="" checked> </span>
+
+              </div>
+              <hr>
+              <div class="checkoutsubtotalgst">
+                <h4>GST @ 5%</h4>
+                <h4 id="checkoutgstamt">₹ 0</h4>
+
+              </div>
+              <hr>
+              <div class="checkoutsubtotalfinalamt">
+                <h3>Total Amount</h3>
+                <h3 id="cehckoutfinalprice">₹ 0</h3>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <h2><span>03</span> Payment Information</h2>
+
+        <div class="caheckoutpayment">   
+          <div>
+            <input type="radio" name="payment" id="cashondelevery" checked value="Cash On Delivery">
+            <label for="cashondelevery">Cash On Delivery</label>
+          </div>
+          <div>
+            <input type="radio" name="payment" id="onlinepayment" value="Pay Online">
+            <label for="onlinepayment">Online Payment</label>
+          </div>
+        </div>    
+        
+       <div >
+        <p class="checkoutpolicy">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#">privacy policy</a>. </p> 
+       </div>      
+
+
+        <button type="submit" class="form-button" id="submitButton">Place Order</button>
+
+      </div>
+
+    </section>
+
+
+   
+    <!-- more contenet  -->
+
+    <section class="morecontent" style="display: none;">
+
+      <h1>More Catloge Comming soon</h1>
+
+    </section>
+
+
+    <!-- footer starting  -->
+
+    <footer>
+
+      <div class="footerup">
+
+        <div>
+          <h2>Useful links</h2>
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Trems & condation</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Return policy</a>
+        </div>
+        <div>
+          <h2>Categories</h2>
+          <a href="#">Blosue</a>
+          <a href="#">Sarees</a>
+          <a href="#">Suit</a>
+          <a href="#">Lehanga</a>
+          <a href="#">Radymade garments</a>
+          <a href="#">Kurti & Gown</a>
+          <a href="#">Dupatta</a>
+        </div>
+        <div>
+          <h2>Let us help You</h2>
+          <a href="#">Product Query</a>
+          <a href="#">Return issue</a>
+          <a href="#">Help</a>
+        </div>
+        <div>
+          <h2>Subscribe us</h2>
+          <input type="text" name="" id="" placeholder="Your Whastapp Number"> <br>
+          <button>Subscribe</button> <br> <br>
+
+          <i class="fa fa-amazon"></i>
+          <i class="fa fa-facebook-official"></i>
+          <i class="fa fa-google-plus-square"></i>
+          <i class="fa fa-instagram"></i>                 <br> <br>
+          <i class="fa fa-pinterest-square"></i>
+          <i class="fa fa-snapchat-square"></i>
+          <i class="fa fa-whatsapp"></i>
+          <i class="fa fa-youtube-square"></i>
+        </div>
+
+      </div>
+                       <hr>
+      <div class="footerbtm">
+        <p>Copyright © 2024 Jay maa Creation | Design & Developed by <a href="#">Anil Kay</a></p>
+
+      </div>
+
+    </footer>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

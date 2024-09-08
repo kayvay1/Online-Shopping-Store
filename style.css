@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+/* website loading data  */
+
+.loadi{
+   position: fixed;
+   /* top: 0; */
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.555); */
+    background-color: white;
+}
+.loadi>p{
+   position: relative;
+   top: 20%;
+   font-size: 24px;
+
+}
+.loadingwebsite{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.loader {
+   --d:22px;
+   width: 4px;
+   height: 4px;
+   border-radius: 50%;
+   color: #25b09b;
+   box-shadow: 
+     calc(1*var(--d))      calc(0*var(--d))     0 0,
+     calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+     calc(0*var(--d))      calc(1*var(--d))     0 2px,
+     calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+     calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+     calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+     calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+   animation: l27 1s infinite steps(8);
+ }
+ @keyframes l27 {
+   100% {transform: rotate(1turn)}
+ }
+
+
+/* card api data starting */
+
+.card-section{
+    width: 100%;
+}
+.card-container{
+    width: 100%;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+width: 380px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+font-family: Arial, sans-serif;
+margin: 20px;
+transition: all .4s ease;
+}
+
+.cardup{
+    width: 100%;
+}
+.cardup>img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+.card:hover .cardup img{
+width: 105%;
+ }
+ .card:hover{
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.473);
+ }
+
+ .cardbtm{
+    width: 100%;
+    padding: 10px 25px;
+ }
+ .cardbtm>h2{
+    color: rgba(35, 35, 35, 0.844);
+    padding: 10px 0px;
+ }
+ .cardbtm>p{
+    color: rgba(42, 42, 42, 0.892);
+    padding: 5px 0px;
+    min-height: 80px;
+ }
+ .cardbtm> .cardbuydata{
+    /* display: flex; */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+ }         
+ .cardselection{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+ }     
+ .cardbtm> .cardbuydata>.cardselection>p{
+    padding: 5px 15px;
+    background-color: rgb(5, 125, 5);
+    display: inline-block;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    box-shadow: 1px 3px 4px grey;
+ }
+ .cardselection>p::after{
+    content: ' \2605';
+    color: yellow;
+    text-align: center;
+ }
+ #cardoption{
+    border: none;
+    background-color: #eeecec77;
+    /* color: orangered; */
+    padding: 5px 15px;
+    box-shadow: 1px 3px 4px grey;
+    width: 120px;
+    border-radius: 0;
+    outline: none;
+ }
+ #cardoption>option{
+    border: none;
+    border-radius: 0;
+ }
+ .cardbtm> .cardbuydata>.carbuy{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+ }   
+ .cardbtm> .cardbuydata>.carbuy>h4{
+    color: black;
+     text-shadow: 1px 2px 3px grey;
+     font-size: larger;
+ }
+ .cardbtm> .cardbuydata>.carbuy>h4::before{
+    content: '\20B9 ';
+ }
+ .cardbtm> .cardbuydata>.carbuy>button{
+    width: 120px;
+    padding: 10px 20px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    box-shadow: 1px 3px 4px grey;
+    transition: all .3s ease;
+ }
+ .cardbtm> .cardbuydata>.carbuy>button:hover{
+    background-color: rgb(167, 46, 2);
+    font-weight: 600;
+    color: white;
+ }
+ 

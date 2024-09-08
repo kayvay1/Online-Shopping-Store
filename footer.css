@@ -1,0 +1,77 @@
+
+:root{
+    --linkcolor : rgba(255, 255, 255, 0.603);
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 25px 20px;
+}
+.footerup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    padding: 15px 5px;
+}
+
+
+/* .footerup>div{  } */
+.footerup>div>h2{ 
+    margin: 10px 0px;
+ }
+.footerup>div>a{
+    display: block;
+    text-decoration: none;
+    color: var(--linkcolor);
+    margin-top: 10px;
+    transition: all .3s ease;
+  }
+
+  .footerup>div>a:hover{
+    color: white;
+  }
+
+  .footerup>div>input{ 
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+   }
+  .footerup>div>button{ 
+    height: 30px;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    background-color: orangered;
+   }
+  .footerup>div>i{ 
+    font-size: 24px;
+    margin: 5px 10px;
+   }
+
+
+
+.footerbtm{
+    padding: 10px 5px;
+    color: var(--linkcolor);
+}
+
+.footerbtm>p>a{
+    color: var(--linkcolor);
+}
+
+
+
+
+
+@media screen and (max-width: 680px){
+   
+    footer{
+        padding: 20px 10px;
+    }
+    
+  } 
